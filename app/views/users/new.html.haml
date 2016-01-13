@@ -1,0 +1,12 @@
+#encoding: utf-8
+
+%h1.field_with_errors Новый пользователь
+= simple_form_for @user do |f|
+  = f.input :name, label: 'Введите имя'
+  = f.input :age, collection: 18..60, prompt: "Select your age"
+  = f.input :email, placeholder: 'user@domain.com'
+  -#= f.input :email_confirmation
+  = f.button :submit, "Сохранить", class: "btn btn-info"
+
+
+
